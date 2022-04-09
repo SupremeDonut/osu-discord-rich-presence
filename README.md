@@ -12,7 +12,6 @@ ___
 
 - Download the source code or clone the repository
 - Download [gosumemory](https://github.com/l3lackShark/gosumemory)
-  - Make sure the .exe file is in a folder called gosu in the same directory as the program
 - Create an OAuth application for osu!
   - Go to your [settings](https://osu.ppy.sh/home/account/edit) on the osu! website and scroll to the bottom
   - Scroll to the bottom and click **"New OAuth Application"**
@@ -21,6 +20,7 @@ ___
 - Rename `.env.example` to `.env` and fill in the necessary information
   - `PLAYER_ID` is your osu! player id
   - `CLIENT_ID` and `CLIENT_SECRET` is the id and secret from your OAuth application
+  - `OSU_PATH` and `GOSUMEMORY_PATH` are the file locations for osu! and gosumemory respectively, and will run those programs if specified
   
 ### Running
 
@@ -28,6 +28,6 @@ After the setup is complete you can then run `main.py`.
 
 Make sure both osu! and discord are open.
 
-If you see nothing happens try turning off rich presence in any other apps you might have open (including osu!)
+If you see nothing happens try turning off rich presence in any other apps you might have open (including osu!), or restart your pc
 
 If you encounter a problem message `SupremeDonut#2332` on Discord.

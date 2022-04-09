@@ -404,8 +404,11 @@ def main():
 			presence.set_activity(new_act)
 			act = new_act
 
-	subprocess.Popen(os.getenv("OSU_PATH"))
-	subprocess.Popen(os.getenv("GOSUMEMORY_PATH"))
+	if osu_path := os.getenv("OSU_PATH"):
+		subprocess.Popen(osu_path)
+	if gosu_path := os.getenv("GOSUMEMORY_PATH"):
+		subprocess.Popen(gosu_path)
+
 	socket = websocket.WebSocketApp(
 		"ws://localhost:24050/ws",
 		on_message=on_message,
